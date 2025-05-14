@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Q4 Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #101010;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #00b894;
+    }
+
+    main {
+      padding: 32px;
+    }
+
+    section {
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 28.8px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+    }
+
+    .profiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .profile-card {
+      background-color: #fff;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+      text-align: center;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 25%;
+      object-fit: cover;
+      margin-bottom: 8px;
+    }
+
+    .profile-card h3 {
+      margin-bottom: 8px;
+      color: #2c3e50;
+    }
+
+    .profile-card p {
+      font-size: 15.2px;
+      margin-bottom: 4.8px;
+    }
+
+    .projects {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      overflow-x: auto;
+      padding-bottom: 16px;
+    }
+
+    .project-card {
+      background-color: #fff;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      min-width: 320px;
+      flex-shrink: 0;
+    }
+
+    .project-card-highlight {
+      background-color: #73B9EE;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      min-width: 320px;
+      flex-shrink: 0;
+    }
+
+    .project-card h3 {
+      color: #2c3e50;
+      margin-bottom: 12.8px;
+      text-align: center;
+    }
+
+    .project-images {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      padding: 16px 0;
+    }
+
+    .project-images img {
+      width: 100%;
+      max-width: 400px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 5px;
+      background-color: #ddd;
+    }
+
+    .project-images .image-caption {
+      font-size: 16px;
+      color: #333;
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .logo {
+    width: 50px;
+    height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .project-images img {
+        width: 100%;
+        max-width: 250px;
+      }
+
+      .projects {
+        gap: 16px;
+      }
+
+      .project-card {
+        min-width: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="OBMCLogo.png" alt="Butterfly" class="logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="quarter1.html">1st Quarter</a></li>
+      <li><a href="quarter2.html">2nd Quarter</a></li>
+      <li><a href="quarter3.html">3rd Quarter</a></li>
+      <li><a href="quarter4.html">4th Quarter</a></li>
+      <li><a href="whatsnext.html">What's Next</a></li>
+      <li><a href="rateus.html">Rate Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Personal Info</h2>
+      <div class="profiles">
+        <div class="profile-card">
+          <img src="Pain.jpg" alt="Pain Adler" class="profile-pic">
+          <h3>Pain Adler G. Mateo</h3>
+          <p><strong>Interests/Clubs:</strong> Music, art, collector, marching band, nature, photography, cooking</p>
+          <p><strong>Ambition:</strong> I am dedicated to work hard and study hard to fulfill my dream of becoming an architect.</p>
+        </div>
+
+        <div class="profile-card">
+          <img src="Gab.jpg" alt="Gabriel" class="profile-pic">
+          <h3>Gabriel Natividad</h3>
+          <p><strong>Interests/Clubs:</strong> Cars, photography, cycling</p>
+          <p><strong>Ambition:</strong> I am committed to studying hard and staying disciplined in order to become a pilot.</p>
+        </div>
+
+        <div class="profile-card">
+          <img src="Lance.jpg" alt="Lance" class="profile-pic">
+          <h3>Lance Arthur P. Naldoza</h3>
+          <p><strong>Interests/Clubs:</strong> Cars, sports, shoes, watches, architecture. </p>
+          <p><strong>Ambition:</strong> To be an influential engineer and to own a business. </p>
+        </div>
+
+        <div class="profile-card">
+          <img src="Miguel.jpg" alt="Miguel" class="profile-pic">
+          <h3>Miguel Ramos</h3>
+          <p><strong>Interests/Clubs:</strong> Music, philosophy, glee club, Rainbow Six: Siege, golf</p>
+          <p><strong>Ambition:</strong> I want to become a philosophy professor in a prestigious college.</p>
+        </div>
+
+        <div class="profile-card">
+          <img src="Vaughn.jpg" alt="Vaughn" class="profile-pic">
+          <h3>Vaughn Matthew R. Repolona</h3>
+          <p><strong>Interests/Clubs:</strong> Photography</p>
+          <p><strong>Ambition:</strong> I wanna be an engineer in the future.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Quarter Projects</h2>
+      <div class="projects">
+        <div class="project-card-highlight">
+          <h3>Quarter 1: HTML & CSS</h3>
+          <div class="project-images">
+            <img src="painproject1.png" alt="painproject1">
+            <p class="image-caption">Project 1 Mateo</p>
+            <img src="gabproject1.png" alt="gabproject1">
+            <p class="image-caption">Project 1 Natividad</p>
+            <img src="lanceproject1.png" alt="lanceproject1">
+            <p class="image-caption">Project 1 Naldoza</p>
+            <img src="miguelproject1.png" alt="miguelproject1">
+            <p class="image-caption">Project 1 Ramos</p>
+            <img src="vonproject1.png" alt="vonproject1">
+            <p class="image-caption">Project 1 Repolona</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>Quarter 2: Github</h3>
+          <div class="project-images">
+            <img src="painproject2.png" alt="painproject2">
+            <p class="image-caption">Project 2 Mateo</p>
+            <img src="gabproject2.png" alt="gabproject2">
+            <p class="image-caption">Project 2 Natividad</p>
+            <img src="lanceproject2.png" alt="lanceproject3">
+            <p class="image-caption">Project 2 Naldoza</p>
+            <img src="miguelproject2.png" alt="miguelproject2">
+            <p class="image-caption">Project 2 Ramos</p>
+            <img src="vonproject2.png" alt="vonproject2">
+            <p class="image-caption">Project 2 Repolona</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>Quarter 3: JavaScript</h3>
+          <div class="project-images">
+            <img src="painproject3.png" alt="painproject3">
+            <p class="image-caption">Project 3 Mateo</p>
+            <img src="gabproject3.png" alt="gabproject3">
+            <p class="image-caption">Project 3 Natividad</p>
+            <img src="lanceproject3.png" alt="lanceproject3">
+            <p class="image-caption">Project 3 Naldoza</p>
+            <img src="miguelproject3.png" alt="miguelproject3">
+            <p class="image-caption">Project 3 Ramos</p>
+            <img src="vonproject3.png" alt="vonproject3">
+            <p class="image-caption">Project 3 Repolona</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>Quarter 4: Group Project</h3>
+          <div class="project-images">
+            <img src="painquiz2.png" alt="painquiz2">
+            <p class="image-caption">Quiz 2 Mateo</p>
+            <img src="gabquiz1.png" alt="gabquiz1">
+            <p class="image-caption">Quiz 1 Natividad</p>
+            <img src="lancequiz2.png" alt="lancequiz2">
+            <p class="image-caption">Quiz 2 Naldoza</p>
+            <img src="miguelquiz2.png" alt="miguelquiz2">
+            <p class="image-caption">Quiz 2 Ramos</p>
+            <img src="vonquiz2.png" alt="vonquiz2">
+            <p class="image-caption">Quiz 2 Repolona</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+<footer style="background-color: #101010; color: white; text-align: center; padding: 24px 16px; font-size: 15.2px;">
+  <p>&copy; For any inquiries, feel free to contact us</p>
+  <p>Naldoza, Mateo, Repolona, Natividad, Ramos M</p>
+</footer>
+
+</html>

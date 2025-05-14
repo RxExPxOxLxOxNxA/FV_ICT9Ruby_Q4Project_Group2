@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rate Us - Q4 Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      background-color: #101010;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #00b894;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 32px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 28.8px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .rating-group {
+      margin-bottom: 32px;
+    }
+
+    .rating-group label.group-title {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 12px;
+      display: block;
+      color: #2c3e50;
+    }
+
+    .rating {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .rating input {
+      display: none;
+    }
+
+    .rating label {
+      font-size: 36px;
+      cursor: pointer;
+      color: #ccc;
+      transition: color 0.3s ease;
+      user-select: none;
+    }
+
+    .rating input:checked ~ label,
+    .rating label:hover,
+    .rating label:hover ~ label {
+      color: #f39c12;
+    }
+
+    button.submit-btn {
+      background-color: #00b894;
+      color: white;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 600;
+      display: block;
+      margin: 0 auto 32px;
+      transition: background-color 0.3s ease;
+    }
+
+    button.submit-btn:hover {
+      background-color: #009b7d;
+    }
+
+    .result {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 24px;
+    }
+
+    .feedback-label {
+      display: block;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .feedback-textarea {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: 100px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      resize: none;
+      font-size: 16px;
+      margin: 0 auto 32px;
+      font-family: 'Outfit', sans-serif;
+      color: #333;
+    }
+
+    .logo {
+      width: 50px;
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 24px 16px;
+        max-width: 100%;
+      }
+      .rating label {
+        font-size: 28px;
+      }
+      button.submit-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="OBMCLogo.png" alt="Butterfly" class="logo">
+    </a>
+    <ul class="nav-links">
+        <li><a href="quarter1.html">1st Quarter</a></li>
+        <li><a href="quarter2.html">2nd Quarter</a></li>
+        <li><a href="quarter3.html">3rd Quarter</a></li>
+        <li><a href="quarter4.html">4th Quarter</a></li>
+        <li><a href="whatsnext.html">What's Next</a></li>
+        <li><a href="rateus.html">Rate Us</a></li>
+      </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Let us know what you think about our portfolio</h2>
+      <form id="rateForm">
+        <div class="rating-group">
+          <label class="group-title" for="website-rating">Rate our website (1 to 5):</label>
+          <div class="rating" id="website-rating">
+            <input type="radio" id="website-star5" name="websiteRating" value="5" />
+            <label for="website-star5" title="5 stars">★</label>
+            <input type="radio" id="website-star4" name="websiteRating" value="4" />
+            <label for="website-star4" title="4 stars">★</label>
+            <input type="radio" id="website-star3" name="websiteRating" value="3" />
+            <label for="website-star3" title="3 stars">★</label>
+            <input type="radio" id="website-star2" name="websiteRating" value="2" />
+            <label for="website-star2" title="2 stars">★</label>
+            <input type="radio" id="website-star1" name="websiteRating" value="1" />
+            <label for="website-star1" title="1 star">★</label>
+          </div>
+        </div>
+
+        <div class="rating-group">
+          <label class="group-title" for="content-rating">Rate the content (1 to 5):</label>
+          <div class="rating" id="content-rating">
+            <input type="radio" id="content-star5" name="contentRating" value="5" />
+            <label for="content-star5" title="5 stars">★</label>
+            <input type="radio" id="content-star4" name="contentRating" value="4" />
+            <label for="content-star4" title="4 stars">★</label>
+            <input type="radio" id="content-star3" name="contentRating" value="3" />
+            <label for="content-star3" title="3 stars">★</label>
+            <input type="radio" id="content-star2" name="contentRating" value="2" />
+            <label for="content-star2" title="2 stars">★</label>
+            <input type="radio" id="content-star1" name="contentRating" value="1" />
+            <label for="content-star1" title="1 star">★</label>
+          </div>
+        </div>
+
+        <div class="result" id="result"></div>
+
+        <label for="feedback" class="feedback-label">Let us know your thoughts (optional):</label>
+        <textarea id="feedback" class="feedback-textarea" name="feedback" placeholder="Write your comments here..."></textarea>
+
+        <button type="submit" class="submit-btn">Submit Feedback</button>
+      </form>
+
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById('rateForm');
+    const resultDiv = document.getElementById('result');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const websiteRating = document.querySelector('input[name="websiteRating"]:checked');
+      const contentRating = document.querySelector('input[name="contentRating"]:checked');
+      const feedbackText = document.getElementById('feedback').value.trim();
+
+      if (!websiteRating || !contentRating) {
+        alert('Please select ratings for both the website and the content.');
+        return;
+      }
+
+      const avg = ((parseInt(websiteRating.value) + parseInt(contentRating.value)) / 2).toFixed(2);
+      resultDiv.textContent = `Average Rating: ${avg} out of 5`;
+
+      alert('Thanks for submitting your feedback!');
+
+    });
+  </script>
+</body>
+<footer style="background-color: #101010; color: white; text-align: center; padding: 24px 16px; font-size: 15.2px;">
+    <p>&copy; For any inquiries, feel free to contact us</p>
+    <p>Naldoza, Mateo, Repolona, Natividad, Ramos M</p>
+  </footer>
+
+</html>
+
